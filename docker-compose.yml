@@ -10,7 +10,7 @@ services:
     volumes:
       - ./data:/var/lib/postgresql/data 
     networks:
-      - postgres-compose-network
+      - workshop1-network
       
   pgadmin4:
     image: dpage/pgadmin4
