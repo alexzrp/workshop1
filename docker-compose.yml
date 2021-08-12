@@ -10,7 +10,7 @@ services:
     environment:
       POSTGRES_PASSWORD: "cap"
     ports:
-      - "15432:5432"
+      - "6003:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data 
     networks:
@@ -22,7 +22,7 @@ services:
       PGADMIN_DEFAULT_EMAIL: "cap@zrp.com.br"
       PGADMIN_DEFAULT_PASSWORD: "cap"
     ports:
-      - "10080:80"
+      - "6002:80"
     depends_on:
       - db
     networks:
