@@ -1,5 +1,9 @@
 version: '3'
 
+volumes:
+  pgdata:
+    driver: local
+
 services:
   db:
     image: postgres
@@ -8,7 +12,7 @@ services:
     ports:
       - "15432:5432"
     volumes:
-      - ./data:/var/lib/postgresql/data 
+      - pgdata:/var/lib/postgresql/data 
     networks:
       - workshop1-network
       
