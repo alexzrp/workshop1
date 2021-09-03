@@ -6,22 +6,20 @@ volumes:
 
 services:
   db:
-    image: postgres
+    image: library/postgres:13-alpine
     environment:
       POSTGRES_PASSWORD: "cap"
-    ports:
-      - "6003:5432"
     volumes:
-      - pgdata:/var/lib/postgresql/data 
+      - pgdata:/var/lib/postgresql/data
     networks:
       - workshop1-network
-      
+
   pgadmin4:
     image: dpage/pgadmin4:5.6
     environment:
       PGADMIN_DEFAULT_EMAIL: "cap@zrp.com.br"
       PGADMIN_DEFAULT_PASSWORD: "cap"
-    volumes: 
+    volumes:
       - ./data:/var/lib/pgadmin/storage
     ports:
       - "6002:80"
@@ -30,6 +28,6 @@ services:
     networks:
       - workshop1-network
 
-networks: 
+networks:
   workshop1-network:
     driver: bridge
