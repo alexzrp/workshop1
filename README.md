@@ -1,6 +1,6 @@
 # Workshop PL/pgSQL
 
-Parte do workshop sobre o workshop de **Stored Procedure no Postgres**
+Parte do workshop sobre **Stored Procedure no Postgres**
 
 Baixe esse projeto com
 ```shell script
